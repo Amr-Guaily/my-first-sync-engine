@@ -1,13 +1,17 @@
 {
+  "scripts": {
+    "start": "ts-node server.ts"
+  },
   "dependencies": {
     "express": "^5.1.0",
-    "pg": "^8.16.3"
+    "pg": "^8.16.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "@types/express": "^5.0.3"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
-    "@types/express": "^5.0.3",
     "nodemon": "^3.1.10",
-    "prettier": "^3.6.2",
-    "typescript": "^5.9.2"
+    "prettier": "^3.6.2"
   }
 }
