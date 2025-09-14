@@ -71,14 +71,23 @@ A lightweight task management app where multiple users can:
 
 ## 7. Proposed Data Models
 
+**User Table:**
+| Field | Type | Description |
+| ----------- | ------ | --------------------------- |
+| id | UUID | Primary key |
+| username | string | Unique username |
+| displayName | string | Display name for the user |
+| avatarUrl | string | (Optional) Avatar image URL |
+| created_at | Date | Account creation timestamp |
+
 **Tasks Table:**
 | Field | Type | Notes |
-|------------------|-------------|-----------------------------|
+|----------------|--------|-----------------------------------------|
 | id | UUID | Primary key |
 | title | String | Required |
 | description | Text | Optional |
 | status | Enum | (“todo”, “in-progress”, “done”) |
-| assigned_user | String | Hardcoded users for demo |
+| assigned_user | UUID | References user id from Users table |
 | updated_at | Timestamp | Used for conflict resolution |
 
 **Sync Actions Table:**
