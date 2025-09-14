@@ -8,31 +8,34 @@ importers:
 
   .:
     dependencies:
+      '@types/express':
+        specifier: ^5.0.3
+        version: 5.0.3
+      '@types/pg':
+        specifier: ^8.15.5
+        version: 8.15.5
       express:
         specifier: ^5.1.0
         version: 5.1.0
       pg:
         specifier: ^8.16.3
         version: 8.16.3
-    devDependencies:
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: ^5.2.2
-        version: 5.2.2(prettier@3.6.2)
-      '@types/express':
-        specifier: ^5.0.3
-        version: 5.0.3
-      nodemon:
-        specifier: ^3.1.10
-        version: 3.1.10
-      prettier:
-        specifier: ^3.6.2
-        version: 3.6.2
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@24.3.3)(typescript@5.9.2)
       typescript:
         specifier: ^5.9.2
         version: 5.9.2
+    devDependencies:
+      '@trivago/prettier-plugin-sort-imports':
+        specifier: ^5.2.2
+        version: 5.2.2(prettier@3.6.2)
+      nodemon:
+        specifier: ^3.1.10
+        version: 3.1.10
+      prettier:
+        specifier: ^3.6.2
+        version: 3.6.2
 
 packages:
 
@@ -141,6 +144,9 @@ packages:
 
   '@types/node@24.3.3':
     resolution: {integrity: sha512-GKBNHjoNw3Kra1Qg5UXttsY5kiWMEfoHq2TmXb+b1rcm6N7B3wTrFYIf/oSZ1xNQ+hVVijgLkiDZh7jRRsh+Gw==}
+
+  '@types/pg@8.15.5':
+    resolution: {integrity: sha512-LF7lF6zWEKxuT3/OR8wAZGzkg4ENGXFNyiV/JeOt9z5B+0ZVwbql9McqX5c/WStFq1GaGso7H1AzP/qSzmlCKQ==}
 
   '@types/qs@6.14.0':
     resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==}
@@ -779,6 +785,12 @@ snapshots:
   '@types/node@24.3.3':
     dependencies:
       undici-types: 7.10.0
+
+  '@types/pg@8.15.5':
+    dependencies:
+      '@types/node': 24.3.3
+      pg-protocol: 1.10.3
+      pg-types: 2.2.0
 
   '@types/qs@6.14.0': {}
 
